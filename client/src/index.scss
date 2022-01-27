@@ -1,0 +1,695 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+	font-family: "Poppins";
+	margin: 0;
+	padding: 0;
+}
+
+$accent: #5840ba;
+$accent-light: #e9e9ff;
+$accent-light-2: #f5f6ff;
+$text: #000000;
+$text-light: #525252;
+$white: #ffffff;
+$white-light: #ffffff88;
+
+body {
+	background: $accent;
+	color: $text;
+}
+
+//--------------------------------------------------------------
+
+button {
+	cursor: pointer;
+	border: 1px solid $accent;
+	background: $accent;
+	font-weight: 500;
+	padding: 0.7rem 1.4rem;
+	border-radius: 0.8rem;
+	color: $white;
+}
+
+input:not(.date-pick),
+textarea {
+	padding: 10px;
+	outline: none;
+	border: none;
+	background: $accent-light;
+	border: 1px solid $accent-light;
+	border-radius: 10px;
+	width: 300px;
+	margin: 7px 0;
+}
+
+input:focus {
+	border: 1px solid $accent;
+}
+
+select {
+	padding: 10px;
+	outline: none;
+	border: none;
+	background: #e7e7e7;
+	border-radius: 10px;
+	width: 320px;
+	margin: 7px 0;
+}
+
+label {
+	margin-top: 5px;
+	width: 100%;
+	margin-left: 10px;
+	color: $accent;
+}
+
+.card {
+	background: $white;
+	border-radius: 10px;
+	padding: 1.2rem;
+	margin: 1.2rem 1rem;
+	box-shadow: 0px 6px 14px -6px rgba(24, 39, 75, 0.12),
+		0px 10px 32px -4px rgba(24, 39, 75, 0.1);
+}
+
+.dropzone-container {
+	margin: 2rem 0;
+}
+
+.dropzone {
+	text-align: center;
+	cursor: pointer;
+	padding: 20px;
+	border: 3px dashed #eeeeee;
+	background-color: #fafafa;
+	color: #bdbdbd;
+	outline: none;
+	margin-bottom: 20px;
+}
+
+.accept {
+	border-color: $accent !important;
+}
+
+.reject {
+	border-color: #d83b01 !important;
+}
+
+.form-grp {
+	display: flex;
+	flex-direction: column;
+}
+//----------------------------------------------------------------
+
+.container {
+	margin: 2rem 18% 0 18%;
+	background: $accent-light-2;
+	padding: 3rem;
+	border-radius: 3rem 3rem 0 0;
+	min-height: 75vh;
+}
+
+.NavBar {
+	margin: 2rem 20%;
+	display: flex;
+	color: $white;
+	align-items: center;
+	justify-content: space-between;
+	.logo {
+		font-weight: 600;
+		font-size: 1.8rem;
+		cursor: pointer;
+	}
+	.links {
+		color: $white-light;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.link {
+			margin-left: 2rem;
+			cursor: pointer;
+			font-size: 0.9rem;
+		}
+	}
+}
+
+.Footer {
+	margin: 0 18%;
+	background: $accent-light-2;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	a {
+		text-decoration: none;
+		color: $accent;
+	}
+	.text {
+		margin-right: 1rem;
+	}
+}
+
+.Home {
+	.top {
+		.box {
+			padding: 4rem;
+			background: var(--white);
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			.left {
+				margin: auto 4rem auto 0;
+				.heading {
+					font-size: 1.2rem;
+					margin-bottom: 1rem;
+					font-weight: 600;
+					.logo {
+						font-weight: 700;
+						font-size: 2.5rem;
+					}
+				}
+				.description {
+					color: $text-light;
+					margin-bottom: 2rem;
+				}
+			}
+			.right {
+				padding: 1rem;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.middle {
+		padding: 0 4rem 0 4rem;
+		h2 {
+			margin-bottom: 2rem;
+		}
+		.feature-card {
+			background: $accent-light;
+			border-radius: 0.8rem;
+			padding: 1.2rem;
+			margin-bottom: 1.2rem;
+		}
+	}
+}
+
+.SignUp {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	img {
+		width: 300px;
+	}
+	.left-bar {
+		.top {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		padding: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			color: #575757;
+			margin: 10px 100px;
+			text-align: center;
+		}
+	}
+	.main-signup {
+		margin: 10% auto;
+		h1 {
+			text-align: center;
+		}
+		.signup-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 30px;
+			width: max-content;
+			margin: 0 auto 30px auto;
+			border-radius: 20px;
+			button {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.Login {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	img {
+		width: 300px;
+	}
+	.left-bar {
+		.top {
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		padding: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		p {
+			color: #575757;
+			margin: 10px 100px;
+			text-align: center;
+		}
+	}
+	.main-login {
+		margin: 10% auto;
+		h1 {
+			text-align: center;
+		}
+		.login-form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 30px;
+			width: max-content;
+			margin: 30px auto;
+			border-radius: 20px;
+			button {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.selector-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	.selector {
+		button {
+			outline: none;
+			border: none;
+			background: $accent-light;
+			padding: 10px 20px;
+			color: $accent;
+		}
+		.left {
+			border-radius: 20px 0 0 20px;
+		}
+		.right {
+			border-radius: 0 20px 20px 0;
+		}
+		#selected {
+			background: $accent;
+			color: white;
+		}
+	}
+}
+
+.Dashboard {
+	.heading {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	.notice-cards {
+		display: flex;
+		align-items: center;
+		overflow-x: scroll;
+		.notice-card {
+			cursor: pointer;
+			&-title {
+				font-weight: 500;
+			}
+			min-width: 20rem;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			&-author {
+				font-size: 0.8rem;
+				color: $text-light;
+			}
+		}
+	}
+	.main-section {
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.DashboardTeacher {
+	.tabs {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		.tab {
+			cursor: pointer;
+			padding: 1rem;
+			color: $accent;
+			background: lighten($color: $accent, $amount: 28);
+		}
+		.tab:first-of-type {
+			border-radius: 1rem 0 0 1rem;
+		}
+		.tab:last-of-type {
+			border-radius: 0 1rem 1rem 0;
+		}
+		.selected-tab {
+			color: white;
+			background: $accent;
+		}
+	}
+}
+
+//---------------
+.Notice {
+	.title {
+		font-size: 1.7rem;
+		font-weight: 600;
+	}
+	.date {
+		font-size: 0.8rem;
+		color: $text-light;
+	}
+	.divider {
+		margin: 1rem 0;
+		width: 100%;
+		height: 0.2rem;
+		background: $accent-light;
+	}
+	button {
+		margin-top: 1rem;
+	}
+}
+
+.Notices {
+	margin-top: 1rem;
+	.notice-cards {
+		column-gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		cursor: pointer;
+		.notice-card-title {
+			font-weight: 500;
+		}
+		.notice-card-author {
+			font-size: 0.8rem;
+			color: $text-light;
+		}
+	}
+}
+
+.course-cards {
+	display: flex;
+	flex-direction: column;
+	.course-card {
+		margin-bottom: 2rem;
+		cursor: pointer;
+		.title {
+			font-weight: 500;
+			margin-bottom: 0.3rem;
+		}
+		.description {
+			margin-bottom: 0.3rem;
+		}
+		.date {
+			font-size: 0.8rem;
+			color: $text-light;
+		}
+		.givenby {
+			margin-top: 1rem;
+			font-size: 0.9rem;
+			color: $accent;
+		}
+	}
+}
+.Courses {
+	margin: 2rem 0 5rem 0;
+	display: grid;
+	column-gap: 4rem;
+	grid-template-columns: 1fr 1fr;
+	.courses {
+		&-title {
+			color: $accent;
+			font-weight: 600;
+			font-size: 1.2rem;
+			margin: 0 0 2rem 0;
+		}
+	}
+	.create-course {
+		&-title {
+			color: $accent;
+			font-weight: 600;
+			font-size: 1.2rem;
+			margin: 0 0 2rem 0;
+		}
+		&-form {
+			display: flex;
+			flex-direction: column;
+		}
+		label {
+			margin-left: 0;
+		}
+		button {
+			margin-top: 1rem;
+			width: max-content;
+		}
+	}
+}
+
+.Course {
+	label {
+		margin-left: none !important;
+	}
+	button {
+		margin-top: 1rem;
+	}
+}
+
+.quiz-cards {
+	display: flex;
+	flex-direction: column;
+	.quiz-card {
+		margin-bottom: 2rem;
+		cursor: pointer;
+		.title {
+			font-weight: 500;
+			margin-bottom: 0.3rem;
+		}
+		.description {
+			margin-bottom: 0.3rem;
+		}
+		.date {
+			font-size: 0.8rem;
+			color: $text-light;
+		}
+		.givenby {
+			margin-top: 1rem;
+			font-size: 0.9rem;
+			color: $accent;
+		}
+	}
+}
+.Quizs {
+	margin: 2rem 0 5rem 0;
+	display: grid;
+	column-gap: 4rem;
+	grid-template-columns: 1fr 1fr;
+	.quizs {
+		&-title {
+			color: $accent;
+			font-weight: 600;
+			font-size: 1.2rem;
+			margin: 0 0 2rem 0;
+		}
+	}
+	.create-quiz {
+		&-title {
+			color: $accent;
+			font-weight: 600;
+			font-size: 1.2rem;
+			margin: 0 0 2rem 0;
+		}
+		&-form {
+			display: flex;
+			flex-direction: column;
+		}
+		label {
+			margin-left: 0;
+		}
+		button {
+			margin-top: 1rem;
+			width: max-content;
+		}
+	}
+}
+table {
+	text-align: left;
+}
+
+.Quizzes {
+	margin: 2rem 0 5rem 0;
+	.create-quiz {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&-title,
+		.or {
+			color: $accent;
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+		&-desc {
+			color: #575757;
+			font-size: 0.9rem;
+			margin: 0 2rem 2rem 2rem;
+		}
+		&-title,
+		&-desc {
+			text-align: center;
+		}
+		&-form {
+			margin-top: 2rem;
+			box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+			padding: 1rem;
+			border-radius: 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+}
+
+.quiz-results {
+	margin-top: 2rem;
+	box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.75);
+	padding: 1rem;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	.quiz-result-item {
+		color: #666666;
+		padding: 0.5rem;
+		border-bottom: solid 0.1rem #666666;
+		.question {
+			&-text {
+				font-weight: bold;
+				color: black;
+			}
+		}
+		.answer {
+			&-text {
+				font-weight: bold;
+				color: $accent;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		margin: 1rem 5% 0 5%;
+		padding: 2rem;
+	}
+	.NavBar {
+		margin: 2rem 10%;
+		.logo {
+			font-size: 1.4rem;
+		}
+	}
+	.Footer {
+		margin: 0 5% 2rem 5%;
+		flex-direction: column;
+	}
+	.Home {
+		.box {
+			padding: 1rem !important;
+			grid-template-columns: 1fr !important;
+		}
+		.left {
+			margin-right: 0 !important;
+		}
+		.right {
+			display: none;
+		}
+		.middle {
+			margin-top: 2rem;
+			padding: 0 1rem;
+		}
+	}
+	.SignUp.container {
+		padding: 0 !important;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+		border-radius: 2rem;
+	}
+	.SignUp {
+		grid-template-columns: 1fr;
+		.left-bar {
+			display: none;
+		}
+		.signup-form {
+			padding: 0 !important;
+		}
+	}
+	.Login.container {
+		padding: 0 !important;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+		border-radius: 2rem;
+	}
+	.Login {
+		grid-template-columns: 1fr;
+		.left-bar {
+			display: none;
+		}
+		.login-form {
+			padding: 0 !important;
+		}
+	}
+	.Dashboard {
+		.main-section {
+			grid-template-columns: 1fr;
+		}
+	}
+	.card {
+		input {
+			width: 90% !important;
+		}
+	}
+	.tabs {
+		grid-template-columns: 1fr 1fr !important;
+		#tab1 {
+			border-radius: 1rem 0 0 0;
+		}
+		#tab2 {
+			border-radius: 0 1rem 0 0;
+		}
+		#tab3 {
+			border-radius: 0 0 0 1rem;
+		}
+		#tab4 {
+			border-radius: 0 0 1rem 0;
+		}
+	}
+	.Courses,
+	.Notices,
+	.Quizs {
+		grid-template-columns: 1fr;
+	}
+	.quiz-card,
+	.course-card{
+		width: fit-content;
+	}
+	.notice-card {
+		width: 75%;
+		margin-left: 0;
+	}
+	.create-course-form {
+		input,
+		textarea {
+			width: 90% !important;
+		}
+	}
+}
